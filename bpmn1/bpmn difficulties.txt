@@ -1,0 +1,22 @@
+1) While creating bpmn file di element does not created
+2) Conversion of bpmn xml to json is difficult
+3) In camunda modeler we need to use their standard json format of form.
+4) Deciding how much detail to include in the BPMN model can be difficult.because including too much detail can make the model difficult to understand and maintain, 
+   while including too little detail can make it difficult to accurately capture the process.
+5) difficult to design own schema
+6) Schema available in their documentation and link of schema generated in bpmn xml are different and unable to open that link
+7)
+
+
+
+
+bpmn modeler bpmn.io
+1) bpmn.io is an open-source tool for creating and editing Business Process Model and Notation (BPMN) diagrams.
+ BPMN is a standard for modeling business processes and is widely used in the business and software development communities.
+
+
+
+
+
+
+

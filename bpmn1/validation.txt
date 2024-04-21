@@ -1,0 +1,68 @@
+*********Date Invalid formats:*******************
+abc
+123
+-------------------
+dd-MM-yyyy failed 20-02-2022
+dd-MM-yy
+yy-MM-dd
+////////////////
+dd/MM/yyyy
+dd/MM/yy
+yy/MM/dd
+....................
+
+dd.MM.yyyy
+dd.MM.yy
+yy.MM.dd
+
+*********Date valid formats:*******************
+------------------------------
+dd-MMM-yyyy
+dd-MMM-yy
+yyyy-MM-dd
+yyyy-MMM-dd
+MM-dd-yyyy
+MMM-dd-yyyy
+MMM-dd-yy
+yy-MMM-dd
+
+/////////////////////////////////////
+
+dd/MMM/yyyy
+dd/MMM/yy
+yyyy/MM/dd
+yyyy/MMM/dd
+MM/dd/yyyy
+MMM/dd/yyyy
+MMM/dd/yy
+yy/MMM/dd
+
+.................................
+dd.MMM.yyyy
+dd.MMM.yy
+yyyy.MM.dd
+yyyy.MMM.dd
+MM.dd.yyyy
+MMM.dd.yyyy
+MMM.dd.yy
+yy.MMM.dd
+
+******************************************************************
+***********Time valid formats************
+HHmmss.SSSZ
+HHmmssZ
+hh:mm:ss a
+hh:mm a
+HH:mm:ss
+HH:mm
+HH
+
+***************Time invalid formats***********
+abc
+mm
+ss
+
+
+
+
+

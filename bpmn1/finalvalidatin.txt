@@ -1,0 +1,121 @@
+ formats
+dd-mm-yyyy ==> Invalid
+dd-mmm-yyyy==>valid ===> utc format ===>yyyy-mm-dd utcvalue 2022-02-19
+dd-mm-yy===> Invalid
+dd-mmm-yy ===>valid ===> utc value 2027-02-21
+yyyy-mm-dd  ===>valid ===> utc value 2027-02-21
+yyyy-mmm-dd  ===>valid ===> utc value 2027-02-21
+mm-dd-yyyy  ===>valid ===> utc value 2027-02-21
+mmm-dd-yyyy  ===>valid ===> utc value 2027-02-21
+mm-dd-yy  ===>valid ===> utc value 2027-02-21
+yy-mm-dd ===> Invalid  *******vallid if yy is greater than 31 
+yy-mmm-dd  (31-feb-20)===>valid ===> utc value 2032-02-19
+
+dd/mm/yyyy ===> Invalid ==if dd is greater than 13 invalid 
+dd/mmm/yyyyvalid ===> utc format ===>yyyy-mm-dd utcvalue 2022-02-20
+dd/mm/yy ===> Invalid
+dd/mmm/yy ===>valid ===> utc value 2027-02-21
+yyyy/mm/dd  ===>valid ===> utc value 2027-02-21
+yyyy/mmm/dd  ===>valid ===> utc value 2027-02-21
+mm/dd/yyyy  ===>valid ===> utc value 2027-02-21
+mmm/dd/yy ===>valid ===> utc value 2027-02-21
+mm/dd/yy  ===>valid ===> utc value 2027-02-21
+yy/mm/dd ===> Invalid  *******vallid if yy is greater than 31 
+ 
+dd.mm.yyyy ==> Invalid
+dd.mmm.yyyy
+dd.mm.yy ===> Invalid
+dd.mmm.yy ===>valid ===> utc value 2027-02-21
+yyyy.mm.dd  ===>valid ===> utc value 2027-02-21
+yyyy.mmm.dd  ===>valid ===> utc value 2027-02-21
+mm.dd.yyyy  ===>valid ===> utc value 2027-02-21
+mmm.dd.yyyy  ===>valid ===> utc value 2027-02-21
+mm.dd.yy  ===>valid ===> utc value 2027-02-21
+yy.mm.dd ===> Invalid  *******vallid if yy is greater than 31 
+yy.mmm.dd  (31-feb-20)===>valid ===> utc value 2032-02-19
+
+
+dd (02)  ===>valid ===> utc value 2001-01-31
+mm(12)   ===>valid ===> utc value 2001-11-30
+mmm(feb) ====>Invalid
+yyyy(2025)  ===>valid ===> utc value 2025-01-01
+yy(35)   ===>valid ===> utc value 1974-12-31
+
+
+
+**********Time********
+hh:mm:ss a(12:30:45 PM) ====>valid ===> utc value 12:30:45  
+hh:mm a (12:30 PM)====>valid ===> utc value 12:30:00
+HH:mm:ss (12:30:45)====>valid ===> utc value 12:30:45
+HH:mm (12:30)====>valid ===> utc value 12:30:00
+HH(12) ====>valid ===> utc value 12:00:00
+mm(30) ====> Invalid  (for values greater than 24; upto 24 it accepts it as hours(hh format) )
+ss(45) ====> Invalid  (for values greater than 24; upto 24 it accepts it as hours(hh format))
+
+
+
+*********************DateTime*****************
+
+dd-MM-yy hh:mm a (10.02.23 12:34 PM)  Valid ===> utc format (2023-10-02T07:04:00.000+00:00)
+dd-MM-yyyy hh:mm a ===> Invalid
+dd-MMM-yy hh:mm a
+dd-MMM-yyyy hh:mm a
+dd-MM-yy HH:mm
+dd-MM-yyyy HH:mm
+dd-MMM-yy HH:mm
+dd-MMM-yyyy HH:mm
+dd-MM-yy hh:mm:ss a
+dd-MM-yyyy hh:mm:ss a
+dd-MMM-yy hh:mm:ss a
+dd-MMM-yyyy hh:mm:ss a
+dd-MM-yy HH:mm:ss
+dd-MM-yyyy HH:mm:ss
+dd-MMM-yy HH:mm:ss
+dd-MMM-yyyy HH:mm:ss
+
+
+
+dd/MM/yy hh:mm a (10.02.23 12:34 PM)  Valid ===> utc format (2023-10-02T07:04:00.000+00:00)
+dd/MM/yyyy hh:mm a====>Invalid
+dd/MMM/yy hh:mm a
+dd/MMM/yyyy hh:mm a
+dd/MM/yy HH:mm
+dd/MM/yyyy HH:mm
+dd/MMM/yy HH:mm
+dd/MMM/yyyy HH:mm
+dd/MM/yy hh:mm:ss a
+dd/MM/yyyy hh:mm:ss a
+dd/MMM/yy hh:mm:ss a
+dd/MMM/yyyy hh:mm:ss a
+dd/MM/yy HH:mm:ss
+dd/MM/yyyy HH:mm:ss
+dd/MMM/yy HH:mm:ss
+dd/MMM/yyyy HH:mm:ss
+
+
+
+dd.MM.yy hh:mm a(10.02.23 12:34 PM)  Valid ===> utc format (2023-10-02T07:04:00.000+00:00)
+dd.MM.yyyy hh:mm a Invalid
+dd.MMM.yy hh:mm a(10.Feb.23 12:34 PM)   Valid ===> utc format  2023-02-10T07:04:00.000+00:00
+dd.MMM.yyyy hh:mm a(10.Feb.2023 12:34 PM)  Valid ===> utc format 2023-02-10T07:04:00.000+00:00
+dd.MM.yy HH:mm(10.02.23 12:34)  Valid ===> utc format 2023-10-02T07:04:00.000+00:00
+dd.MM.yyyy HH:mm(10.02.2023 12:34)  Valid ===> utc format 2023-10-02T07:04:00.000+00:00
+dd.MMM.yy HH:mm(10.Feb.23 12:34)  Valid ===> utc format  2023-02-10T07:04:00.000+00:00
+dd.MMM.yyyy HH:mm(10.Feb.2023 12:34)  Valid ===> utc format 2023-02-10T07:04:00.000+00:00
+dd.MM.yy hh:mm:ss a(10.02.23 12:34:56 PM)  Valid ===> utc format 2023-10-02T07:04:56.5656+00:00
+dd.MM.yyyy hh:mm:ss a(10.02.2023 12:34:56 PM)  Valid ===> utc format 2023-10-02T07:04:56.5656+00:00
+dd.MMM.yy hh:mm:ss a(10.Feb.23 12:34:56 PM)  Valid ===> utc format 2023-02-10T07:04:56.5656+00:00
+dd.MMM.yyyy hh:mm:ss a(10.Feb.2023 12:34:56 PM)  Valid ===> utc format 2023-02-10T07:04:56.5656+00:00
+dd.MM.yy HH:mm:ss(10.02.23 12:34:56)  Valid ===> utc format 2023-10-02T07:04:56.5656+00:00
+dd.MM.yyyy HH:mm:ss(10.02.2023 12:34:56)  Valid ===> utc format 2023-10-02T07:04:56.5656+00:00
+dd.MMM.yy HH:mm:ss(10.Feb.23 12:34:56)  Valid ===> utc format 2023-02-10T07:04:56.5656+00:00
+dd.MMM.yyyy HH:mm:ss(10.Feb.2325 12:34:56)  Valid ===> utc format 2325-02-10T07:04:56.5656+00:00
+
+
+
+
+
+
+
+
+

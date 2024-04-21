@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <process id="project-initiation">
+    <startEvent id="start"/>
+    <userTask id="form-submission" name="Project Initiation Form">
+      <extensionElements>
+        <formProperty id="form-title" name="Form Title"/>
+        <formProperty id="form-fields" name="Form Fields">
+          <formProperty id="status" name="Status"/>
+          <formProperty id="wid" name="WID"/>
+        </formProperty>
+        <formProperty id="bots" name="Bots"/>
+      </extensionElements>
+    </userTask>
+    <userTask id="task-1" name="Task 1">
+      <extensionElements>
+        <formProperty id="task-field" name="Task">
+          <formProperty id="name" name="Name"/>
+          <formProperty id="duration" name="Duration"/>
+          <formProperty id="tags" name="Tags"/>
+          <formProperty id="notes" name="Notes"/>
+        </formProperty>
+        <formProperty id="people-field" name="People">
+          <formProperty id="assign-to" name="Assign To"/>
+          <formProperty id="escalation" name="Escalation">
+            <formProperty id="days" name="Days"/>
+            <formProperty id="level1" name="Level 1"/>
+            <formProperty id="level2" name="Level 2"/>
+          </formProperty>
+          <formProperty id="communication" name="Communication">
+            <formProperty id="send-email" name="Send Email"/>
+          </formProperty>
+        </formProperty>
+        <formProperty id="logic-field" name="Logic">
+          <formProperty id="activated-on" name="Activated On"/>
+          <formProperty id="next-tasks" name="Next Tasks"/>
+          <formProperty id="completed-on" name="Completed On"/>
+          <formProperty id="action-mail-config" name="Action Mail Config"/>
+          <formProperty id="miscellaneous" name="Miscellaneous"/>
+        </formProperty>
+      </extensionElements>
+    </userTask>
+    <userTask id="task-2" name="Task 2">
+      <extensionElements>
+        <!-- Task, People and Logic fields are same as Task 1 -->
+      </extensionElements>
+    </userTask>
+    <userTask id="task-3" name="Task 3">
+      <extensionElements>
+        <!-- Task, People and Logic fields are same as Task 1 -->
+      </extensionElements>
+    </userTask>
+    <userTask id="task-4" name="Task 4">
+      <extensionElements>
+        <!-- Task, People and Logic fields are same as Task 1 -->
+      </extensionElements>
+    </userTask>
+    <endEvent id="end"/>
+    <!-- <sequenceFlow id="flow1" sourceRef="start" targetRef="end"/> -->
+<!-- dependencies -->
+
+<sequenceFlow id="flow1" sourceRef="start" targetRef="form-submission"/>
+<sequenceFlow id="flow2" sourceRef="form-submission" targetRef="task-1"/>
+<sequenceFlow id="flow3" sourceRef="task-1" targetRef="task-2"/>
+<sequenceFlow id="flow4" sourceRef="task-1" targetRef="task-3"/>
+<sequenceFlow id="flow5" sourceRef="fork" targetRef="task-2"/>
+<sequenceFlow id="flow6" sourceRef="fork" targetRef="task-3"/>
+<parallelGateway id="fork" name="Fork">
+  <incoming>flow3</incoming>
+  <outgoing>flow5</outgoing>
+  <outgoing>flow6</outgoing>
+</parallelGateway>
+
+<sequenceFlow id="flow7" sourceRef="task-2" targetRef="task-4"/>
+<sequenceFlow id="flow8" sourceRef="task-3" targetRef="task-4"/>
+<sequenceFlow id="flow9" sourceRef="task-4" targetRef="end"/>

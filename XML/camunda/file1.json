@@ -1,0 +1,830 @@
+{
+"workflows": [
+    {
+      "WorkflowTypeID": 68,
+      "Title": "Demo1",
+      "Description": "",
+      "OrgZviceID": 3000279084,
+{
+    "WFConfiguration": {
+      "InitiationForm": {
+        "FormTitle": "Demo",
+        "FormType": "INITIATION",
+        "Elements": [
+          {
+            "ElementID": "SECTION",
+            "ElementType": "SECTION",
+            "Elements": [
+              {
+                "ElementType": "SPINNER",
+                "FieldLabel": "Status",
+                "ElementID": "Status",
+                "Options": [
+                  "Not Started",
+                  "Active",
+                  "Active (Delayed)",
+                  "Rework",
+                  "Escalated",
+                  "Escalated (Level 1)",
+                  "Escalated (Level 2)",
+                  "Delayed",
+                  "Locked",
+                  "On Hold",
+                  "Skipped",
+                  "Completed",
+                  "Completed (Delayed)"
+                ],
+                "DefaultValue": "Active",
+                "Required": true,
+                "MetaData": {
+                  "HideElement": true,
+                  "IsAdminOnly": true,
+                  "IsEditable": true
+                },
+                "Attributes": {
+                  "subType": "SPINNER"
+                }
+              },
+              {
+                "ElementType": "EDIT_TEXT",
+                "FieldLabel": "wid",
+                "ElementID": "wid",
+                "Required": false,
+                "MetaData": {
+                  "HideElement": true,
+                  "IsAdminOnly": true,
+                  "IsEditable": false
+                }
+              },
+              {
+                "ElementType": "EDIT_TEXT",
+                "ElementID": "EID_y181p5bd6o",
+                "FieldLabel": "Name",
+                "DefaultValue": null,
+                "Required": false,
+                "ValueType": "STATIC_VALUE",
+                "Hint": null,
+                "Options": [
+                  
+                ],
+                "Attributes": {
+                  "Width": 100,
+                  "subType": "EDIT_TEXT"
+                },
+                "MetaData": {
+                  "PythonFlag": false,
+                  "IsEditable": true,
+                  "IsAdminOnly": false,
+                  "IsHidden": false,
+                  "LinkedToOther": false,
+                  "SourceForm": null,
+                  "SourceField": null,
+                  "WriteToMaster": false,
+                  "MasterForm": null,
+                  "MasterField": null,
+                  "ShowLabel": true,
+                  "IsUnique": false,
+                  "HideElement": false,
+                  "EditIfUnique": false,
+                  "LazyLoad": false,
+                  "LoadsWidgets": false,
+                  "TextFieldType": null,
+                  "MaxResults": 100
+                },
+                "Validations": [
+                  {
+                    "operator": "NOT_EMPTY",
+                    "operands": [
+                      
+                    ],
+                    "show_error": true,
+                    "error_message": "Enter name"
+                  }
+                ]
+              }
+            ],
+            "FieldLabel": "SECTION"
+          }
+        ]
+      },
+      "WFTasks": [
+        {
+          "FormID": "WFE_onokaxijhn",
+          "FormTitle": "Task1",
+          "FormDescription": null,
+          "FormType": "WORKFLOW",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_fbgik2crq5",
+                  "FieldLabel": "City Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                },
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_roqsgnaspa",
+                  "FieldLabel": "Employee Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                }
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "Bots": [
+            
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Stage": "WFE_onokaxijhn",
+              "Duration": {
+                "Days": 1,
+                "Hours": 0,
+                "Minutes": 0
+              },
+              "AssignTo": "Project Creator",
+              "Status": null,
+              "Previous": [
+                "START"
+              ],
+              "Next": [
+                "WFE_c557rs71d6"
+              ],
+              "Trigger": {
+                "TriggerOn": "Start",
+                "Previous": [
+                  "START"
+                ],
+                "Next": [
+                  {
+                    "TaskID": "WFE_c557rs71d6",
+                    "Condition": null,
+                    "Delay": {
+                      
+                    }
+                  }
+                ]
+              },
+              "CommPrefs": null,
+              "SendEmail": false,
+              "MailConfig": {
+                "Msg": null
+              },
+              "Skip": false,
+              "WaitForAll": false,
+              "RevertOnSubmission": false,
+              "SkipCompleteManually": false,
+              "Tags": [
+                "Employee"
+              ],
+              "Escalation": {
+                
+              },
+              "ReverseDependencyReference": null,
+              "ReverseDependencyDuration": null,
+              "StageBot": null
+            }
+          }
+        },
+        {
+          "FormID": "WFE_c557rs71d6",
+          "FormTitle": "Task2",
+          "FormDescription": null,
+          "FormType": "WORKFLOW",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_fbgik2crq5",
+                  "FieldLabel": "City Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                },
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_roqsgnaspa",
+                  "FieldLabel": "Employee Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                }
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "Bots": [
+            
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Stage": "WFE_c557rs71d6",
+              "Duration": {
+                "Days": 1,
+                "Hours": 0,
+                "Minutes": 0
+              },
+              "AssignTo": "Project Creator",
+              "Status": null,
+              "Previous": [
+                "WFE_onokaxijhn"
+              ],
+              "Next": [
+                
+              ],
+              "Trigger": {
+                "TriggerOn": "Previous",
+                "Previous": [
+                  "WFE_onokaxijhn"
+                ],
+                "Next": [
+                  
+                ]
+              },
+              "CommPrefs": null,
+              "SendEmail": false,
+              "MailConfig": {
+                "Msg": null
+              },
+              "Skip": false,
+              "WaitForAll": false,
+              "RevertOnSubmission": false,
+              "SkipCompleteManually": false,
+              "Tags": [
+                "Employee"
+              ],
+              "Escalation": {
+                
+              },
+              "ReverseDependencyReference": null,
+              "ReverseDependencyDuration": null,
+              "StageBot": null
+            }
+          }
+        }
+      ],
+      "WFTopTasks": [
+        
+      ],
+      "Tags": [
+        {
+          "FormTitle": "Employee",
+          "FormDescription": "",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Color": "#FF4848",
+              "Repeatable": false
+            }
+          }
+        }
+      ],
+      "Summary": {
+        "TasksCount": 2,
+        "BotsCount": 0
+      }
+    }
+  },
+  {
+    "DeployedWFConfiguration": {
+      "InitiationForm": {
+        "FormTitle": "Demo",
+        "FormType": "INITIATION",
+        "Elements": [
+          {
+            "ElementID": "SECTION",
+            "ElementType": "SECTION",
+            "Elements": [
+              {
+                "ElementType": "SPINNER",
+                "FieldLabel": "Status",
+                "ElementID": "Status",
+                "Options": [
+                  "Not Started",
+                  "Active",
+                  "Active (Delayed)",
+                  "Rework",
+                  "Escalated",
+                  "Escalated (Level 1)",
+                  "Escalated (Level 2)",
+                  "Delayed",
+                  "Locked",
+                  "On Hold",
+                  "Skipped",
+                  "Completed",
+                  "Completed (Delayed)"
+                ],
+                "DefaultValue": "Active",
+                "Required": true,
+                "MetaData": {
+                  "HideElement": true,
+                  "IsAdminOnly": true,
+                  "IsEditable": true
+                },
+                "Attributes": {
+                  "subType": "SPINNER"
+                }
+              },
+              {
+                "ElementType": "EDIT_TEXT",
+                "FieldLabel": "wid",
+                "ElementID": "wid",
+                "Required": false,
+                "MetaData": {
+                  "HideElement": true,
+                  "IsAdminOnly": true,
+                  "IsEditable": false
+                }
+              },
+              {
+                "ElementType": "EDIT_TEXT",
+                "ElementID": "EID_y181p5bd6o",
+                "FieldLabel": "Name",
+                "DefaultValue": null,
+                "Required": false,
+                "ValueType": "STATIC_VALUE",
+                "Hint": null,
+                "Options": [
+                  
+                ],
+                "Attributes": {
+                  "Width": 100,
+                  "subType": "EDIT_TEXT"
+                },
+                "MetaData": {
+                  "PythonFlag": false,
+                  "IsEditable": true,
+                  "IsAdminOnly": false,
+                  "IsHidden": false,
+                  "LinkedToOther": false,
+                  "SourceForm": null,
+                  "SourceField": null,
+                  "WriteToMaster": false,
+                  "MasterForm": null,
+                  "MasterField": null,
+                  "ShowLabel": true,
+                  "IsUnique": false,
+                  "HideElement": false,
+                  "EditIfUnique": false,
+                  "LazyLoad": false,
+                  "LoadsWidgets": false,
+                  "TextFieldType": null,
+                  "MaxResults": 100
+                },
+                "Validations": [
+                  {
+                    "operator": "NOT_EMPTY",
+                    "operands": [
+                      
+                    ],
+                    "show_error": true,
+                    "error_message": "Enter name"
+                  }
+                ]
+              }
+            ],
+            "FieldLabel": "SECTION"
+          }
+        ]
+      },
+      "WFTasks": [
+        {
+          "FormID": "WFE_onokaxijhn",
+          "FormTitle": "Task1",
+          "FormDescription": null,
+          "FormType": "WORKFLOW",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_fbgik2crq5",
+                  "FieldLabel": "City Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                },
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_roqsgnaspa",
+                  "FieldLabel": "Employee Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                }
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "Bots": [
+            
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Stage": "WFE_onokaxijhn",
+              "Duration": {
+                "Days": 1,
+                "Hours": 0,
+                "Minutes": 0
+              },
+              "AssignTo": "Project Creator",
+              "Status": null,
+              "Previous": [
+                "START"
+              ],
+              "Next": [
+                "WFE_c557rs71d6"
+              ],
+              "Trigger": {
+                "TriggerOn": "Start",
+                "Previous": [
+                  "START"
+                ],
+                "Next": [
+                  {
+                    "TaskID": "WFE_c557rs71d6",
+                    "Condition": null,
+                    "Delay": {
+                      
+                    }
+                  }
+                ]
+              },
+              "CommPrefs": null,
+              "SendEmail": false,
+              "MailConfig": {
+                "Msg": null
+              },
+              "Skip": false,
+              "WaitForAll": false,
+              "RevertOnSubmission": false,
+              "SkipCompleteManually": false,
+              "Tags": [
+                "Employee"
+              ],
+              "Escalation": {
+                
+              },
+              "ReverseDependencyReference": null,
+              "ReverseDependencyDuration": null
+            }
+          }
+        },
+        {
+          "FormID": "WFE_c557rs71d6",
+          "FormTitle": "Task2",
+          "FormDescription": null,
+          "FormType": "WORKFLOW",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_fbgik2crq5",
+                  "FieldLabel": "City Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                },
+                {
+                  "ElementType": "EDIT_TEXT",
+                  "ElementID": "EID_roqsgnaspa",
+                  "FieldLabel": "Employee Name",
+                  "DefaultValue": null,
+                  "Required": false,
+                  "ValueType": "STATIC_VALUE",
+                  "Hint": null,
+                  "Options": [
+                    
+                  ],
+                  "Attributes": {
+                    "Width": 100,
+                    "subType": "EDIT_TEXT"
+                  },
+                  "MetaData": {
+                    "PythonFlag": false,
+                    "IsEditable": true,
+                    "IsAdminOnly": false,
+                    "IsHidden": false,
+                    "LinkedToOther": false,
+                    "SourceForm": null,
+                    "SourceField": null,
+                    "WriteToMaster": false,
+                    "MasterForm": null,
+                    "MasterField": null,
+                    "ShowLabel": true,
+                    "IsUnique": false,
+                    "HideElement": false,
+                    "EditIfUnique": false,
+                    "LazyLoad": false,
+                    "LoadsWidgets": false,
+                    "TextFieldType": null,
+                    "MaxResults": 100
+                  }
+                }
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "Bots": [
+            
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Stage": "WFE_c557rs71d6",
+              "Duration": {
+                "Days": 1,
+                "Hours": 0,
+                "Minutes": 0
+              },
+              "AssignTo": "Project Creator",
+              "Status": null,
+              "Previous": [
+                "WFE_onokaxijhn"
+              ],
+              "Next": [
+                
+              ],
+              "Trigger": {
+                "TriggerOn": "Previous",
+                "Previous": [
+                  "WFE_onokaxijhn"
+                ],
+                "Next": [
+                  
+                ]
+              },
+              "CommPrefs": null,
+              "SendEmail": false,
+              "MailConfig": {
+                "Msg": null
+              },
+              "Skip": false,
+              "WaitForAll": false,
+              "RevertOnSubmission": false,
+              "SkipCompleteManually": false,
+              "Tags": [
+                "Employee"
+              ],
+              "Escalation": {
+                
+              },
+              "ReverseDependencyReference": null,
+              "ReverseDependencyDuration": null
+            }
+          }
+        }
+      ],
+      "WFTopTasks": [
+        
+      ],
+      "Tags": [
+        {
+          "FormTitle": "Employee",
+          "FormDescription": "",
+          "Elements": [
+            {
+              "ElementID": "SECTION",
+              "ElementType": "SECTION",
+              "Elements": [
+                
+              ],
+              "FieldLabel": "SECTION"
+            }
+          ],
+          "MetaData": {
+            "TaskData": {
+              "Color": "#FF4848",
+              "Repeatable": false
+            }
+          }
+        }
+      ],
+      "Summary": {
+        "TasksCount": 2,
+        "BotsCount": 0
+      }
+    }
+  }
+    }
+]
+}

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="3cd8340" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0" camunda:diagramRelationId="dd3bb858-30cd-4f85-8d20-0b75762fbdf6">
+  <bpmn:collaboration id="Collaboration_0hk4sbe">
+    <bpmn:participant id="Participant_16xjzgt" name="Demo 1" processRef="template-demo1-task-tutorial" />
+  </bpmn:collaboration>
+  <bpmn:process id="template-demo1-task-tutorial" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_152fe9a">{"WFTasks":{
+        "FormID": "WFE_mjgvkzcd2g",
+        "FormTitle": "City",
+        "FormDescription": null,
+        "FormType": "WORKFLOW",
+        "Elements": [
+          {
+            "ElementID": "SECTION",
+            "ElementType": "SECTION",
+            "Elements": [
+              {
+                "ElementType": "RADIO_GROUP",
+                "ElementID": "EID_pkfojuv5wz",
+                "FieldLabel": "City Name",
+                "DefaultValue": null,
+                "Required": false,
+                "ValueType": "STATIC_VALUE",
+                "Hint": null,
+                "Options": [
+                  "Pune",
+                  "Mumbai"
+                ],
+                "Attributes": {
+                  "Width": 100,
+                  "subType": "RADIO_GROUP"
+                },
+                "MetaData": {
+                  "PythonFlag": false,
+                  "IsEditable": true,
+                  "IsAdminOnly": false,
+                  "IsHidden": false,
+                  "LinkedToOther": false,
+                  "SourceForm": null,
+                  "SourceField": null,
+                  "WriteToMaster": false,
+                  "MasterForm": null,
+                  "MasterField": null,
+                  "ShowLabel": true,
+                  "IsUnique": false,
+                  "HideElement": false,
+                  "EditIfUnique": false,
+                  "LazyLoad": false,
+                  "LoadsWidgets": false,
+                  "TextFieldType": null,
+                  "MaxResults": 100
+                }
+              }
+            ],
+            "FieldLabel": "SECTION"
+          }
+        ],
+        "Bots": [],
+        "MetaData": {
+          "TaskData": {
+            "Stage": "WFE_mjgvkzcd2g",
+            "Duration": {
+              "Days": 1,
+              "Hours": 0,
+              "Minutes": 0
+            },
+            "AssignTo": "Project Creator",
+            "Status": null,
+            "Previous": [
+              "START"
+            ],
+            "Next": [
+              "WFE_7rw2x6dtsn",
+              "WFE_lf6k27ympg"
+            ],
+            "Trigger": {
+              "TriggerOn": "Start",
+              "Previous": [
+                "START"
+              ],
+              "Next": [
+                {
+                  "TaskID": "WFE_7rw2x6dtsn",
+                  "Condition": {
+                    "triggers": {
+                      "1": {
+                        "left": {
+                          "type": "FORM",
+                          "form_title": "WFE_mjgvkzcd2g",
+                          "form_field": "City Name",
+                          "task_field": null,
+                          "value": null
+                        },
+                        "condition": "EQ",
+                        "right": {
+                          "type": "USER_INPUT",
+                          "form_title": null,
+                          "form_field": "Pune",
+                          "task_field": null,
+                          "value": "Pune"
+                        }
+                      }
+                    },
+                    "trigger_equation": [
+                      "OR",
+                      [
+                        1
+                      ]
+                    ],
+                    "actions": []
+                  },
+                  "Delay": {}
+                },
+                {
+                  "TaskID": "WFE_lf6k27ympg",
+                  "Condition": {
+                    "triggers": {
+                      "1": {
+                        "left": {
+                          "type": "FORM",
+                          "form_title": "WFE_mjgvkzcd2g",
+                          "form_field": "City Name",
+                          "task_field": null,
+                          "value": null
+                        },
+                        "condition": "EQ",
+                        "right": {
+                          "type": "USER_INPUT",
+                          "form_title": null,
+                          "form_field": "Mumbai",
+                          "task_field": null,
+                          "value": "Mumbai"
+                        }
+                      }
+                    },
+                    "trigger_equation": [
+                      "OR",
+                      [
+                        1
+                      ]
+                    ],
+                    "actions": []
+                  },
+                  "Delay": {}
+                }
+              ]
+            },
+            "CommPrefs": null,
+            "SendEmail": false,
+            "MailConfig": {
+              "Msg": null
+            },
+            "Skip": false,
+            "WaitForAll": false,
+            "RevertOnSubmission": false,
+            "SkipCompleteManually": false,
+            "Tags": [
+              "Employee"
+            ],
+            "Escalation": {},
+            "ReverseDependencyReference": null,
+            "ReverseDependencyDuration": null,
+            "NextConfig": {
+              "WFE_7rw2x6dtsn": {
+                "Condition": {
+                  "triggers": {
+                    "1": {
+                      "left": {
+                        "type": "FORM",
+                        "form_title": "WFE_mjgvkzcd2g",
+                        "form_field": "City Name",
+                        "task_field": null,
+                        "value": null
+                      },
+                      "condition": "EQ",
+                      "right": {
+                        "type": "USER_INPUT",
+                        "form_title": null,
+                        "form_field": "Pune",
+                        "task_field": null,
+                        "value": "Pune"
+                      }
+                    }
+                  },
+                  "trigger_equation": [
+                    "OR",
+                    [
+                      1
+                    ]
+                  ],
+                  "actions": []
+                }
+              },
+              "WFE_lf6k27ympg": {
+                "Condition": {
+                  "triggers": {
+                    "1": {
+                      "left": {
+                        "type": "FORM",
+                        "form_title": "WFE_mjgvkzcd2g",
+                        "form_field": "City Name",
+                        "task_field": null,
+                        "value": null
+                      },
+                      "condition": "EQ",
+                      "right": {
+                        "type": "USER_INPUT",
+                        "form_title": null,
+                        "form_field": "Mumbai",
+                        "task_field": null,
+                        "value": "Mumbai"
+                      }
+                    }
+                  },
+                  "trigger_equation": [
+                    "OR",
+                    [
+                      1
+                    ]
+                  ],
+                  "actions": []
+                }
+              }
+            },
+            "StageBot": null
+          }
+        }
+      }}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1cjt6nl">{"WFTasks":{
+        "FormID": "WFE_lf6k27ympg",
+        "FormTitle": "Go To Mumbai",
+        "FormDescription": null,
+        "FormType": "WORKFLOW",
+        "Elements": [
+          {
+            "ElementID": "SECTION",
+            "ElementType": "SECTION",
+            "Elements": [
+              {
+                "ElementType": "TEXT_VIEW",
+                "ElementID": "EID_mvhpoew9ri",
+                "FieldLabel": "Selected city-mumbai",
+                "DefaultValue": null,
+                "Required": false,
+                "ValueType": "STATIC_VALUE",
+                "Hint": null,
+                "Options": [],
+                "Attributes": {
+                  "Width": 100,
+                  "subType": "TEXT_VIEW"
+                },
+                "MetaData": {
+                  "PythonFlag": false,
+                  "IsEditable": true,
+                  "IsAdminOnly": false,
+                  "IsHidden": false,
+                  "LinkedToOther": false,
+                  "SourceForm": null,
+                  "SourceField": null,
+                  "WriteToMaster": false,
+                  "MasterForm": null,
+                  "MasterField": null,
+                  "ShowLabel": true,
+                  "IsUnique": false,
+                  "HideElement": false,
+                  "EditIfUnique": false,
+                  "LazyLoad": false,
+                  "LoadsWidgets": false,
+                  "TextFieldType": null,
+                  "MaxResults": 100
+                }
+              }
+            ],
+            "FieldLabel": "SECTION"
+          }
+        ],
+        "Bots": [],
+        "MetaData": {
+          "TaskData": {
+            "Stage": "WFE_lf6k27ympg",
+            "Duration": {
+              "Days": 1,
+              "Hours": 0,
+              "Minutes": 0
+            },
+            "AssignTo": "Project Creator",
+            "Status": null,
+            "Previous": [
+              "WFE_mjgvkzcd2g"
+            ],
+            "Next": [],
+            "Trigger": {
+              "TriggerOn": "Previous",
+              "Previous": [
+                "WFE_mjgvkzcd2g"
+              ],
+              "Next": []
+            },
+            "CommPrefs": null,
+            "SendEmail": false,
+            "MailConfig": {
+              "Msg": null
+            },
+            "Skip": false,
+            "WaitForAll": false,
+            "RevertOnSubmission": false,
+            "SkipCompleteManually": false,
+            "Tags": [
+              "Employee"
+            ],
+            "Escalation": {},
+            "ReverseDependencyReference": null,
+            "ReverseDependencyDuration": null,
+            "StageBot": null
+          }
+        }
+      }}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_1p3v68v">{"WFTasks":{
+        "FormID": "WFE_7rw2x6dtsn",
+        "FormTitle": "Go To Pune",
+        "FormDescription": null,
+        "FormType": "WORKFLOW",
+        "Elements": [
+          {
+            "ElementID": "SECTION",
+            "ElementType": "SECTION",
+            "Elements": [
+              {
+                "ElementType": "TEXT_VIEW",
+                "ElementID": "EID_mvhpoew9ri",
+                "FieldLabel": "Selected city-pune",
+                "DefaultValue": null,
+                "Required": false,
+                "ValueType": "STATIC_VALUE",
+                "Hint": null,
+                "Options": [],
+                "Attributes": {
+                  "Width": 100,
+                  "subType": "TEXT_VIEW"
+                },
+                "MetaData": {
+                  "PythonFlag": false,
+                  "IsEditable": true,
+                  "IsAdminOnly": false,
+                  "IsHidden": false,
+                  "LinkedToOther": false,
+                  "SourceForm": null,
+                  "SourceField": null,
+                  "WriteToMaster": false,
+                  "MasterForm": null,
+                  "MasterField": null,
+                  "ShowLabel": true,
+                  "IsUnique": false,
+                  "HideElement": false,
+                  "EditIfUnique": false,
+                  "LazyLoad": false,
+                  "LoadsWidgets": false,
+                  "TextFieldType": null,
+                  "MaxResults": 100
+                }
+              }
+            ],
+            "FieldLabel": "SECTION"
+          }
+        ],
+        "Bots": [],
+        "MetaData": {
+          "TaskData": {
+            "Stage": "WFE_7rw2x6dtsn",
+            "Duration": {
+              "Days": 1,
+              "Hours": 0,
+              "Minutes": 0
+            },
+            "AssignTo": "Project Creator",
+            "Status": null,
+            "Previous": [
+              "WFE_mjgvkzcd2g"
+            ],
+            "Next": [],
+            "Trigger": {
+              "TriggerOn": "Previous",
+              "Previous": [
+                "WFE_mjgvkzcd2g"
+              ],
+              "Next": []
+            },
+            "CommPrefs": null,
+            "SendEmail": false,
+            "MailConfig": {
+              "Msg": null
+            },
+            "Skip": false,
+            "WaitForAll": false,
+            "RevertOnSubmission": false,
+            "SkipCompleteManually": false,
+            "Tags": [
+              "Employee"
+            ],
+            "Escalation": {},
+            "ReverseDependencyReference": null,
+            "ReverseDependencyDuration": null,
+            "StageBot": null
+          }
+        }
+      }}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:exclusiveGateway id="city-gateway" name="City?">
+      <bpmn:incoming>Flow_06ss774</bpmn:incoming>
+      <bpmn:outgoing>pune-path</bpmn:outgoing>
+      <bpmn:outgoing>mumbai-path</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="decide-city" name="City">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_152fe9a" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_11y9y90</bpmn:incoming>
+      <bpmn:outgoing>Flow_06ss774</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="go-to-pune" name="Go To Pune">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1p3v68v" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>pune-path</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w8mlzf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="go-to-mumbai" name="Go To Mumbai">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1cjt6nl" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>mumbai-path</bpmn:incoming>
+      <bpmn:outgoing>Flow_08ngagh</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_11y9y90</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_112i6vk" name="Reached">
+      <bpmn:incoming>Flow_0w8mlzf</bpmn:incoming>
+      <bpmn:incoming>Flow_08ngagh</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_06ss774" sourceRef="decide-city" targetRef="city-gateway" />
+    <bpmn:sequenceFlow id="pune-path" name="Pune" sourceRef="city-gateway" targetRef="go-to-pune">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= city = "pune"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="mumbai-path" name="Mumbai" sourceRef="city-gateway" targetRef="go-to-mumbai">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= city = "mumbai"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_11y9y90" sourceRef="StartEvent_1" targetRef="decide-city" />
+    <bpmn:sequenceFlow id="Flow_0w8mlzf" sourceRef="go-to-pune" targetRef="Event_112i6vk" />
+    <bpmn:sequenceFlow id="Flow_08ngagh" sourceRef="go-to-mumbai" targetRef="Event_112i6vk" />
+    <bpmn:userTask id="Activity_1t8wyzm" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0hk4sbe">
+      <bpmndi:BPMNShape id="Participant_16xjzgt_di" bpmnElement="Participant_16xjzgt" isHorizontal="true">
+        <dc:Bounds x="160" y="40" width="800" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0wuwes6_di" bpmnElement="city-gateway" isMarkerVisible="true">
+        <dc:Bounds x="445" y="143" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="427" y="136" width="26" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06qp7v3_di" bpmnElement="decide-city">
+        <dc:Bounds x="308" y="128" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_174hh3g_di" bpmnElement="go-to-pune">
+        <dc:Bounds x="560" y="78" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0edtwui_di" bpmnElement="go-to-mumbai">
+        <dc:Bounds x="560" y="190" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="212" y="152" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="218" y="195" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_112i6vk_di" bpmnElement="Event_112i6vk">
+        <dc:Bounds x="902" y="150" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="898" y="193" width="45" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nv9cl2_di" bpmnElement="Activity_1t8wyzm">
+        <dc:Bounds x="810" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_06ss774_di" bpmnElement="Flow_06ss774">
+        <di:waypoint x="408" y="168" />
+        <di:waypoint x="445" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10fo3iz_di" bpmnElement="pune-path">
+        <di:waypoint x="470" y="143" />
+        <di:waypoint x="470" y="118" />
+        <di:waypoint x="560" y="118" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="487" y="98" width="26" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mlcqv2_di" bpmnElement="mumbai-path">
+        <di:waypoint x="470" y="193" />
+        <di:waypoint x="470" y="230" />
+        <di:waypoint x="560" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="474" y="236" width="40" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11y9y90_di" bpmnElement="Flow_11y9y90">
+        <di:waypoint x="248" y="169" />
+        <di:waypoint x="308" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w8mlzf_di" bpmnElement="Flow_0w8mlzf">
+        <di:waypoint x="660" y="118" />
+        <di:waypoint x="781" y="118" />
+        <di:waypoint x="781" y="168" />
+        <di:waypoint x="902" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08ngagh_di" bpmnElement="Flow_08ngagh">
+        <di:waypoint x="660" y="230" />
+        <di:waypoint x="781" y="230" />
+        <di:waypoint x="781" y="168" />
+        <di:waypoint x="902" y="168" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

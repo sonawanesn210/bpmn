@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             targetNamespace="http://www.activiti.org/bpmn20"
+             id="sample-id">
+  <process id="process1" isExecutable="true">
+    <startEvent id="startEvent" />
+    <userTask id="formTask" name="Project Initiation Form">
+      <documentation>Form Title, Form Fields, Bots</documentation>
+      <extensionElements>
+        <bpmn2:inputSet>
+          <bpmn2:dataInput id="status" name="Status" />
+          <bpmn2:dataInput id="wid" name="WID" />
+        </bpmn2:inputSet>
+      </extensionElements>
+    </userTask>
+    <userTask id="task1" name="Task 1">
+      <extensionElements>
+        <bpmn2:inputSet>
+          <bpmn2:dataInput id="taskData" name="Task Data">
+            <bpmn2:dataInput id="taskName" name="Task Name" />
+            <bpmn2:dataInput id="taskDuration" name="Task Duration" />
+            <bpmn2:dataInput id="taskTags" name="Task Tags" />
+            <bpmn2:dataInput id="taskNotes" name="Task Notes" />
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="peopleData" name="People Data">
+            <bpmn2:dataInput id="assignTo" name="Assign To" />
+            <bpmn2:dataInput id="escalationData" name="Escalation Data">
+              <bpmn2:dataInput id="escalationDays" name="Escalation Days" />
+              <bpmn2:dataInput id="escalationLevel1" name="Escalation Level 1" />
+              <bpmn2:dataInput id="escalationLevel2" name="Escalation Level 2" />
+            </bpmn2:dataInput>
+            <bpmn2:dataInput id="communicationData" name="Communication Data">
+              <bpmn2:dataInput id="sendEmail" name="Send Email" />
+            </bpmn2:dataInput>
+          </bpmn2:dataInput>
+         <bpmn2:dataInput id="logicData" name="Logic Data">
+            <bpmn2:dataInput id="activatedOn" name="Activated On" />
+            <bpmn2:dataInput id="nextTasks" name="Next Tasks" />
+            <bpmn2:dataInput id="completedOn" name="Completed On" />
+            <bpmn2:dataInput id="actionMailConfig" name="Action Mail Config" />
+            <bpmn2:dataInput id="miscellaneous" name="Miscellaneous" />
+          </bpmn2:dataInput>
+          </bpmn2:inputSet>
+      </extensionElements>
+    </userTask>
+        <!-- same structure as task1 -->
+    <userTask id="task2" name="Task 2">
+      <extensionElements>
+        <bpmn2:inputSet>
+          <bpmn2:dataInput id="task" name="Task">
+            <bpmn2:dataInput id="name" name="Name" />
+            <bpmn2:dataInput id="duration" name="Duration" />
+            <bpmn2:dataInput id="tags" name="Tags" />
+            <bpmn2:dataInput id="notes" name="Notes" />
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="people" name="People">
+            <bpmn2:dataInput id="assignTo" name="Assign To" />
+            <bpmn2:dataInput id="escalation" name="Escalation">
+              <bpmn2:dataInput id="days" name="Days" />
+              <bpmn2:dataInput id="level1" name="Level 1" />
+              <bpmn2:dataInput id="level2" name="Level 2" />
+            </bpmn2:dataInput>
+            <bpmn2:dataInput id="communication" name="Communication">
+              <bpmn2:dataInput id="sendEmail" name="Send Email" />
+            </bpmn2:dataInput>
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="logic" name="Logic">
+            <bpmn2:dataInput id="activatedOn" name="Activated On" />
+            <bpmn2:dataInput id="nextTasks" name="Next Tasks" />
+            <bpmn2:dataInput id="completedOn" name="Completed On" />
+            <bpmn2:dataInput id="actionMailConfig" name="Action Mail Config" />
+            <bpmn2:dataInput id="miscellaneous" name="Miscellaneous" />
+          </bpmn2:dataInput>
+        </bpmn2:inputSet>
+      </extensionElements>
+    </userTask>
+    <!-- same structure as task1 -->
+    <userTask id="task3" name="Task 3">
+      <extensionElements>
+        <bpmn2:inputSet>
+          <bpmn2:dataInput id="task" name="Task">
+            <bpmn2:dataInput id="name" name="Name" />
+            <bpmn2:dataInput id="duration" name="Duration" />
+            <bpmn2:dataInput id="tags" name="Tags" />
+            <bpmn2:dataInput id="notes" name="Notes" />
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="people" name="People">
+            <bpmn2:dataInput id="assignTo" name="Assign To" />
+            <bpmn2:dataInput id="escalation" name="Escalation">
+              <bpmn2:dataInput id="days" name="Days" />
+              <bpmn2:dataInput id="level1" name="Level 1" />
+              <bpmn2:dataInput id="level2" name="Level 2" />
+            </bpmn2:dataInput>
+            <bpmn2:dataInput id="communication" name="Communication">
+              <bpmn2:dataInput id="sendEmail" name="Send Email" />
+            </bpmn2:dataInput>
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="logic" name="Logic">
+            <bpmn2:dataInput id="activatedOn" name="Activated On" />
+            <bpmn2:dataInput id="nextTasks" name="Next Tasks" />
+            <bpmn2:dataInput id="completedOn" name="Completed On" />
+            <bpmn2:dataInput id="actionMailConfig" name="Action Mail Config" />
+            <bpmn2:dataInput id="miscellaneous" name="Miscellaneous" />
+          </bpmn2:dataInput>
+        </bpmn2:inputSet>
+      </extensionElements>
+    </userTask>
+        <!-- same structure as task1 -->
+    <userTask id="task4" name="Task 4">
+      <extensionElements>
+        <bpmn2:inputSet>
+          <bpmn2:dataInput id="task" name="Task">
+            <bpmn2:dataInput id="name" name="Name" />
+            <bpmn2:dataInput id="duration" name="Duration" />
+            <bpmn2:dataInput id="tags" name="Tags" />
+            <bpmn2:dataInput id="notes" name="Notes" />
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="people" name="People">
+            <bpmn2:dataInput id="assignTo" name="Assign To" />
+            <bpmn2:dataInput id="escalation" name="Escalation">
+              <bpmn2:dataInput id="days" name="Days" />
+              <bpmn2:dataInput id="level1" name="Level 1" />
+              <bpmn2:dataInput id="level2" name="Level 2" />
+            </bpmn2:dataInput>
+            <bpmn2:dataInput id="communication" name="Communication">
+              <bpmn2:dataInput id="sendEmail" name="Send Email" />
+            </bpmn2:dataInput>
+          </bpmn2:dataInput>
+          <bpmn2:dataInput id="logic" name="Logic">
+            <bpmn2:dataInput id="activatedOn" name="Activated On" />
+            <bpmn2:dataInput id="nextTasks" name="Next Tasks" />
+            <bpmn2:dataInput id="completedOn" name="Completed On" />
+            <bpmn2:dataInput id="actionMailConfig" name="Action Mail Config" />
+            <bpmn2:dataInput id="miscellaneous" name="Miscellaneous" />
+          </bpmn2:dataInput>
+        </bpmn2:inputSet>
+      </extensionElements>
+    </userTask>
+    <!-- dependencies -->
+    <sequenceFlow id="flow1" sourceRef="startEvent" targetRef="task1" />
+    <sequenceFlow id="flow2" sourceRef="task1" targetRef="task2" />
+    <sequenceFlow id="flow3" sourceRef="task1" targetRef="task3" />
+    <!-- parallel -->
+    <parallelGateway id="parallel" name="Parallel">
+      <incoming>
+        <sourceRef>task2</sourceRef>
+        <sourceRef>task3</sourceRef>
+      </incoming>
+      <outgoing>
+        <targetRef>task4</targetRef>
+      </outgoing>
+    </parallelGateway>
+    <sequenceFlow id="flow4" sourceRef="task4" targetRef="endEvent" />
+  </process>
+</definitions>

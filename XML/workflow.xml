@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  targetNamespace="http://www.example.com/bpmn/testing">
+
+  <!-- Process definition -->
+  <process id="bpmn-testing-process">
+
+    <!-- Start event -->
+    <startEvent id="start-event"/>
+
+    <!-- Project initiation form task -->
+    <task id="project-initiation-form-task">
+      <extensionElements>
+        <!-- Form title -->
+        <formProperty id="form-title" name="Form Title" />
+        <!-- Form fields -->
+        <formProperty id="form-fields" name="Form Fields">
+          <!-- Status -->
+          <formProperty id="status" name="Status" />
+          <!-- WID -->
+          <formProperty id="wid" name="WID" />
+        </formProperty>
+        <!-- Bots -->
+        <formProperty id="bots" name="Bots" />
+      </extensionElements>
+    </task>
+
+    <!-- Task 1 -->
+    <task id="task1">
+      <extensionElements>
+        <!-- Task -->
+        <formProperty id="task" name="Task">
+          <!-- Name -->
+          <formProperty id="name" name="Name" />
+          <!-- Duration -->
+          <formProperty id="duration" name="Duration" />
+          <!-- Tags -->
+          <formProperty id="tags" name="Tags" />
+          <!-- Notes -->
+          <formProperty id="notes" name="Notes" />
+        </formProperty>
+        <!-- Data -->
+        <formProperty id="data" name="Data" >
+        <!-- Data Points -->
+        <formProperty id="data-points" name="Data Points" />
+        <!-- People -->
+        <formProperty id="people" name="People">
+          <!-- Assign To -->
+          <formProperty id="assign-to" name="Assign To" />
+          <!-- Escalation -->
+          <formProperty id="escalation" name="Escalation">
+            <!-- Days -->
+            <formProperty id="days" name="Days" />
+            <!-- Level1 -->
+            <formProperty id="level1" name="Level1" />
+            <!-- Level2 -->
+            <formProperty id="level2" name="Level2" />
+          </formProperty>
+          <!-- Communication -->
+          <formProperty id="communication" name="Communication">
+            <!-- Send email -->
+            <formProperty id="send-email" name="Send Email" />
+          </formProperty>
+        </formProperty>
+        <!-- Logic -->
+        <formProperty id="logic" name="Logic">
+          <!-- Activated On -->
+          <formProperty id="activated-on" name="Activated On" />
+          <!-- Next Tasks -->
+          <formProperty id="next-tasks" name="Next Task" />
+          <!-- Completed On -->
+        <formProperty id="completed-on" name="Completed On" />
+        <!-- Action Mail Config -->
+        <formProperty id="action-mail-config" name="Action Mail Config" />
+        <!-- Miscellaneous -->
+        <formProperty id="miscellaneous" name="Miscellaneous" />
+      </formProperty>
+    </extensionElements>
+  </task>
+
+  <!-- Task 2 -->
+    <task id="task2">
+      <extensionElements>
+        <!-- Task -->
+        <formProperty id="task" name="Task">
+          <!-- Name -->
+          <formProperty id="name" name="Name" />
+          <!-- Duration -->
+          <formProperty id="duration" name="Duration" />
+          <!-- Tags -->
+          <formProperty id="tags" name="Tags" />
+          <!-- Notes -->
+          <formProperty id="notes" name="Notes" />
+        </formProperty>
+        <!-- Data -->
+        <formProperty id="data" name="Data" />
+        <!-- People -->
+        <formProperty id="people" name="People">
+          <!-- Assign To -->
+          <formProperty id="assign-to" name="Assign To" />
+          <!-- Escalation -->
+          <formProperty id="escalation" name="Escalation">
+            <!-- Days -->
+            <formProperty id="days" name="Days" />
+            <!-- Level1 -->
+            <formProperty id="level1" name="Level1" />
+            <!-- Level2 -->
+            <formProperty id="level2" name="Level2" />
+          </formProperty>
+          <!-- Communication -->
+          <formProperty id="communication" name="Communication">
+            <!-- Send email -->
+            <formProperty id="send-email" name="Send Email" />
+          </formProperty>
+        </formProperty>
+        <!-- Logic -->
+        <formProperty id="logic" name="Logic">
+          <!-- Activated On -->
+          <formProperty id="activated-on" name="Activated On" />
+          <!-- Next Tasks -->
+          <formProperty id="next-tasks" name="Next Task" />
+          <!-- Completed On -->
+        <formProperty id="completed-on" name="Completed On" />
+        <!-- Action Mail Config -->
+        <formProperty id="action-mail-config" name="Action Mail Config" />
+        <!-- Miscellaneous -->
+        <formProperty id="miscellaneous" name="Miscellaneous" />
+      </formProperty>
+    </extensionElements>
+  </task>
+
+  <!-- Task 3 -->
+   <task id="task3">
+      <extensionElements>
+        <!-- Task -->
+        <formProperty id="task" name="Task">
+          <!-- Name -->
+          <formProperty id="name" name="Name" />
+          <!-- Duration -->
+          <formProperty id="duration" name="Duration" />
+          <!-- Tags -->
+          <formProperty id="tags" name="Tags" />
+          <!-- Notes -->
+          <formProperty id="notes" name="Notes" />
+        </formProperty>
+        <!-- Data -->
+        <formProperty id="data" name="Data" />
+        <!-- People -->
+        <formProperty id="people" name="People">
+          <!-- Assign To -->
+          <formProperty id="assign-to" name="Assign To" />
+          <!-- Escalation -->
+          <formProperty id="escalation" name="Escalation">
+            <!-- Days -->
+            <formProperty id="days" name="Days" />
+            <!-- Level1 -->
+            <formProperty id="level1" name="Level1" />
+            <!-- Level2 -->
+            <formProperty id="level2" name="Level2" />
+          </formProperty>
+          <!-- Communication -->
+          <formProperty id="communication" name="Communication">
+            <!-- Send email -->
+            <formProperty id="send-email" name="Send Email" />
+          </formProperty>
+        </formProperty>
+        <!-- Logic -->
+        <formProperty id="logic" name="Logic">
+          <!-- Activated On -->
+          <formProperty id="activated-on" name="Activated On" />
+          <!-- Next Tasks -->
+          <formProperty id="next-tasks" name="Next Task" />
+          <!-- Completed On -->
+        <formProperty id="completed-on" name="Completed On" />
+        <!-- Action Mail Config -->
+        <formProperty id="action-mail-config" name="Action Mail Config" />
+        <!-- Miscellaneous -->
+        <formProperty id="miscellaneous" name="Miscellaneous" />
+      </formProperty>
+    </extensionElements>
+  </task>
+
+  <!-- Task 4 -->
+    <task id="task4">
+      <extensionElements>
+        <!-- Task -->
+        <formProperty id="task" name="Task">
+          <!-- Name -->
+          <formProperty id="name" name="Name" />
+          <!-- Duration -->
+          <formProperty id="duration" name="Duration" />
+          <!-- Tags -->
+          <formProperty id="tags" name="Tags" />
+          <!-- Notes -->
+          <formProperty id="notes" name="Notes" />
+        </formProperty>
+        <!-- Data -->
+        <formProperty id="data" name="Data" />
+        <!-- People -->
+        <formProperty id="people" name="People">
+          <!-- Assign To -->
+          <formProperty id="assign-to" name="Assign To" />
+          <!-- Escalation -->
+          <formProperty id="escalation" name="Escalation">
+            <!-- Days -->
+            <formProperty id="days" name="Days" />
+            <!-- Level1 -->
+            <formProperty id="level1" name="Level1" />
+            <!-- Level2 -->
+            <formProperty id="level2" name="Level2" />
+          </formProperty>
+          <!-- Communication -->
+          <formProperty id="communication" name="Communication">
+            <!-- Send email -->
+            <formProperty id="send-email" name="Send Email" />
+          </formProperty>
+        </formProperty>
+        <!-- Logic -->
+        <formProperty id="logic" name="Logic">
+          <!-- Activated On -->
+          <formProperty id="activated-on" name="Activated On" />
+          <!-- Next Tasks -->
+          <formProperty id="next-tasks" name="Next Task" />
+          <!-- Completed On -->
+        <formProperty id="completed-on" name="Completed On" />
+        <!-- Action Mail Config -->
+        <formProperty id="action-mail-config" name="Action Mail Config" />
+        <!-- Miscellaneous -->
+        <formProperty id="miscellaneous" name="Miscellaneous" />
+      </formProperty>
+    </extensionElements>
+  </task>
+
+  <!-- End event -->
+  <endEvent id="end-event" />
+<!-- linear Dependency -->
+<sequenceFlow id="flow1" sourceRef="start-even" targetRef="project-initiation-form-task"/>
+<sequenceFlow id="flow2" sourceRef="project-initiation-form-task" targetRef="task-1"/>
+<sequenceFlow id="flow3" sourceRef="task-1" targetRef="task-2"/>
+<sequenceFlow id="flow4" sourceRef="task-1" targetRef="task-3"/>
+<!-- parallel dependency -->
+<sequenceFlow id="flow5" sourceRef="parallel" targetRef="task-2"/>
+<sequenceFlow id="flow6" sourceRef="parallel" targetRef="task-3"/>
+<parallelGateway id="parallel" name="parallel">
+  <incoming>flow3</incoming>
+  <outgoing>flow5</outgoing>
+  <outgoing>flow6</outgoing>
+</parallelGateway>
+<!-- multiple dependency -->
+<sequenceFlow id="flow7" sourceRef="task-2" targetRef="task-4"/>
+<sequenceFlow id="flow8" sourceRef="task-3" targetRef="task-4"/>
+<sequenceFlow id="flow9" sourceRef="task-4" targetRef="end"/>
+</process>
+</definitions>
+
+

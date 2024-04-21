@@ -1,0 +1,128 @@
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  id="Definitions_1"
+                  targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1"/>
+    <bpmn:userTask id="Task_1" name="Task 1">
+      <bpmn:extensionElements>
+        <bpmn:field name="Task">
+          <bpmn:field name="Name"/>
+          <bpmn:field name="Duration"/>
+          <bpmn:field name="Tags"/>
+          <bpmn:field name="Notes"/>
+        </bpmn:field>
+        <bpmn:field name="Data"/>
+        <bpmn:field name="People">
+          <bpmn:field name="Assign To"/>
+          <bpmn:field name="Escalation">
+            <bpmn:field name="Days"/>
+            <bpmn:field name="Level1"/>
+            <bpmn:field name="Level2"/>
+          </bpmn:field>
+          <bpmn:field name="Communication">
+            <bpmn:field name="Send email"/>
+          </bpmn:field>
+        </bpmn:field>
+        <bpmn:field name="Logic">
+          <bpmn:field name="Activated On"/>
+          <bpmn:field name="Next Tasks"/>
+          <bpmn:field name="Completed On"/>
+          <bpmn:field name="Action Mail Config"/>
+          <bpmn:field name="Miscellaneous"/>
+        </bpmn:field>
+        <bpmn:field name="Automation"/>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_2" name="Task 2">
+      <bpmn:extensionElements>
+        <bpmn:field name="Task">
+          <bpmn:field name="Name"/>
+          <bpmn:field name="Duration"/>
+          <bpmn:field name="Tags"/>
+          <bpmn:field name="Notes"/>
+        </bpmn:field>
+        <bpmn:field name="Data"/>
+        <bpmn:field name="People">
+          <bpmn:field name="Assign To"/>
+          <bpmn:field name="Escalation">
+            <bpmn:field name="Days"/>
+            <bpmn:field name="Level1"/>
+            <bpmn:field name="Level2"/>
+          </bpmn:field>
+          <bpmn:field name="Communication">
+                      <bpmn:field name="Send email"/>
+          </bpmn:field>
+        </bpmn:field>
+        <bpmn:field name="Logic">
+          <bpmn:field name="Activated On"/>
+          <bpmn:field name="Next Tasks"/>
+          <bpmn:field name="Completed On"/>
+          <bpmn:field name="Action Mail Config"/>
+          <bpmn:field name="Miscellaneous"/>
+        </bpmn:field>
+        <bpmn:field name="Automation"/>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_3" name="Task 3">
+      <bpmn:extensionElements>
+        <bpmn:field name="Task">
+          <bpmn:field name="Name"/>
+          <bpmn:field name="Duration"/>
+          <bpmn:field name="Tags"/>
+          <bpmn:field name="Notes"/>
+        </bpmn:field>
+        <bpmn:field name="Data"/>
+        <bpmn:field name="People">
+          <bpmn:field name="Assign To"/>
+          <bpmn:field name="Escalation">
+            <bpmn:field name="Days"/>
+            <bpmn:field name="Level1"/>
+            <bpmn:field name="Level2"/>
+          </bpmn:field>
+          <bpmn:field name="Communication">
+            <bpmn:field name="Send email"/>
+          </bpmn:field>
+        </bpmn:field>
+        <bpmn:field name="Logic">
+          <bpmn:field name="Activated On"/>
+          <bpmn:field name="Next Tasks"/>
+          <bpmn:field name="Completed On"/>
+          <bpmn:field name="Action Mail Config"/>
+          <bpmn:field name="Miscellaneous"/>
+        </bpmn:field>
+        <bpmn:field name="Automation"/>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_4" name="Task 4">
+      <bpmn:extensionElements>
+        <bpmn:field name="Task">
+          <bpmn:field name="Name"/>
+          <bpmn:field name="Duration"/>
+          <bpmn:field name="Tags"/>
+          <bpmn:field name="Notes"/>
+        </bpmn:field>
+        <bpmn:field name="Data"/>
+        <bpmn:field name="People">
+          <bpmn:field name="Assign To"/>
+          <bpmn:field name="Escalation">
+            <bpmn:field name="Days"/>
+            <bpmn:field name="Level1"/>
+            <bpmn:field name="Level2"/>
+          </bpmn:field>
+          <bpmn:field name="Communication">
+            <bpmn:field name="Send email"/>
+                    </bpmn:field>
+        </bpmn:field>
+        <bpmn:field name="Automation"/>
+      </bpmn:extensionElements>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmn:sequenceFlow id="flow_1" sourceRef="Task_1" targetRef="Task_2"/>
+  <bpmn:sequenceFlow id="flow_2" sourceRef="Task_1" targetRef="Task_3"/>
+  <bpmn:sequenceFlow id="flow_3" sourceRef="Task_2" targetRef="Task_4"/>
+  <bpmn:sequenceFlow id="flow_4" sourceRef="Task_3" targetRef="Task_4"/>
+</bpmn:definitions>
+
+

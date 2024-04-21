@@ -1,0 +1,58 @@
+//Date Validations(same for -,/,. formats)
+********Valid Formats*******
+
+
+//dd-MMM-yyyy
+//let date = moment.parseZone('20-sep-2022') true
+
+//yyyy-MMM-dd
+//let date = moment.parseZone('2022-sep-20') true
+
+//yyyy-MM-dd
+//let date = moment.parseZone('2017-04-21');true
+
+//yyyy/MM/dd
+//let date = moment.parseZone('2022/04/22') true
+
+
+//MM-dd-yyyy
+//let date = moment.parseZone('12-22-2022') true
+
+//MMM-dd-yyyy
+//let date = moment.parseZone('dec-22-2022')true
+
+//MMM-dd-yy
+//let date = moment.parseZone('dec-22-22') true
+
+//MM-dd-yy
+//let date = moment.parseZone('03-22-20') true
+
+//yy-MMM-dd
+//let date = moment.parseZone('32-sep-12') true
+
+
+******Invalid Formats********
+
+//dd-MM-yyyy
+//let date = moment.parseZone('20-04-2022') false
+
+//dd-MM-yy
+//let date = moment.parseZone('25-12-30') false
+
+//yy-MM-dd
+//let date = moment.parseZone('20-05-20') false
+
+//let date = moment.parseZone('20/03/2022') false
+//let date = moment.parseZone('20/sep/2022') true
+// let date = moment.parseZone('02/12/30') true
+// let date = moment.parseZone('25/12/30') false
+//let date = moment.parseZone('20/sep/20') true
+//let date = moment.parseZone('2022/02/20') true
+//let date = moment.parseZone('12/22/2022') true
+
+
+//let date = moment.parseZone('20.03.2022') false
+//let date = moment.parseZone('2022.sep.20') true
+//let isValid = date.isValid();
+
+//document.getElementById("isValid").innerHTML = isValid;
